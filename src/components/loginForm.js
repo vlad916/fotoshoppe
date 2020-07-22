@@ -1,14 +1,28 @@
 import React, { Component } from "react";
 import Input from "./common/input";
+import Joi from 'joi-browser';
 
 class LoginForm extends Component {
   state = {
     account: { username: "", password: "" },
     errors: {},
   };
+    
+    schema = {
+        username: Joi.string().required(),
+        password: Joi.string().required()
+    };
 
-  validate = () => {
-    return { username: "Username is required." };
+    validate = () => {
+        const result = Joi.validate(this.state.account, this.schema, {
+            abortEarly: false
+        });
+        if (!result.error) return null;
+
+        const errors = {};
+        for (let item of result.error.details)
+            errors[item.path[0]] = item.message;
+        return errors;
   };
   handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +34,10 @@ class LoginForm extends Component {
     console.log("Submitted");
   };
 
+    validateProperty = ({ name, value }) => {
+        const obj = {};
+        Joi.validate()
+    }
   handleChange = ({ currentTarget: input }) => {
     const errors = { ...this.state.errors };
     const errorMessage = this.validateProperty(input);
