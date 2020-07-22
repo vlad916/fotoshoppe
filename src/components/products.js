@@ -1,30 +1,41 @@
 import React, { Component } from "react";
 import { getProducts } from "../services/productsService";
-import Like from './common/like';
+import Like from "./common/like";
+import Pagination from "./common/pagination";
+import { paginate } from '../utils/paginate';
 import "./products.css";
 
 class Products extends Component {
   state = {
     products: getProducts(),
+    currentPage: 1,
+    pageSize: 4,
   };
 
   handleDelete = (product) => {
     const products = this.state.products.filter((p) => p._id !== product._id);
     this.setState({ products });
   };
-    
-    handleLike = (product) => {
-        const products = [...this.state.products];
-        const index = products.indexOf(product);
-        products[index] = { ...products[index] };
-        products[index].liked = !products[index].liked;
-        this.setState({ products });
-    };
+
+  handleLike = (product) => {
+    const products = [...this.state.products];
+    const index = products.indexOf(product);
+    products[index] = { ...products[index] };
+    products[index].liked = !products[index].liked;
+    this.setState({ products });
+  };
+
+  handlePageChange = (page) => {
+    this.setState({ currentPage: page });
+  };
 
   render() {
     const { length: count } = this.state.products;
+    const { pageSize, currentPage, products: allProducts } = this.state;
 
-    if (count === 0) return <p>There are no products in the database.</p>;
+      if (count === 0) return <p>There are no products in the database.</p>;
+      
+      const products = paginate(allProducts, currentPage, pageSize)
     return (
       <React.Fragment>
         <p>Showing {count} products...</p>
@@ -36,12 +47,12 @@ class Products extends Component {
               <th>Price</th>
               <th>Stocks</th>
               <th>Rate</th>
-                        <th></th>
-                        <th></th>
+              <th></th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
-            {this.state.products.map((product) => (
+            {products.map((product) => (
               <tr key={product._id}>
                 <td>
                   <img src={product.image} />
@@ -49,10 +60,13 @@ class Products extends Component {
                 <td>{product.product}</td>
                 <td>{product.price}</td>
                 <td>{product.numberInStock}</td>
-                    <td>{product.dailyRentalRate}</td>
-                    <td>
-                        <Like liked={product.liked} onLikeToggle={()=> this.handleLike(product)}/>
-                    </td>
+                <td>{product.dailyRentalRate}</td>
+                <td>
+                  <Like
+                    liked={product.liked}
+                    onLikeToggle={() => this.handleLike(product)}
+                  />
+                </td>
                 <td>
                   <button
                     onClick={() => this.handleDelete(product)}
@@ -65,6 +79,12 @@ class Products extends Component {
             ))}
           </tbody>
         </table>
+        <Pagination
+          itemsCount={count}
+          pageSize={pageSize}
+          currentPage={currentPage}
+          onPageChange={this.handlePageChange}
+        />
       </React.Fragment>
     );
   }
