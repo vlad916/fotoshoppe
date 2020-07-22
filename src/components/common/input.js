@@ -8,8 +8,8 @@ const Input = (props) => {
             <input
                 value={value}
                 onChange={onChange}
-                id="username"
-                name="username"
+                id={name}
+                name={name}
                 type="text"
                 className="form-control"
             />
