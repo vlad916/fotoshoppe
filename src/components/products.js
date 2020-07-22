@@ -5,7 +5,7 @@ import { paginate } from "../utils/paginate";
 import ProductsTable from "./productsTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
-import _ from "lodash";
+import _, { toArray } from "lodash";
 
 import "./products.css";
 
@@ -48,18 +48,14 @@ class Products extends Component {
     this.setState({ sortColumn });
   };
 
-  render() {
-    const { length: count } = this.state.products;
+  getPagedData = () => {
     const {
       pageSize,
       currentPage,
       selectedGenre,
       sortColumn,
-      products: allProducts,
-      genres,
+      products: allProducts
     } = this.state;
-
-    if (count === 0) return <p>There are no products in the database.</p>;
 
     const filtered =
       selectedGenre && selectedGenre._id
@@ -69,6 +65,22 @@ class Products extends Component {
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
 
     const products = paginate(sorted, currentPage, pageSize);
+
+    return { totalCount: filtered.length, data: products };
+  }
+
+  render() {
+    const { length: count } = this.state.products;
+    const {
+      pageSize,
+      currentPage,
+      sortColumn,
+      genres
+    } = this.state;
+
+    if (count === 0) return <p>There are no products in the database.</p>;
+
+    const { totalCount, data: products } = this.getPagedData();
     return (
       <div className="row">
         <div className="col-3">
@@ -79,7 +91,7 @@ class Products extends Component {
           />
         </div>
         <div className="col">
-          <p>Showing {filtered.length} products...</p>
+          <p>Showing {totalCount} products...</p>
           <ProductsTable
             products={products}
             sortColumn={sortColumn}
@@ -88,7 +100,7 @@ class Products extends Component {
             onSort={this.handleSort}
           />
           <Pagination
-            itemsCount={filtered.length}
+            itemsCount={totalCount}
             pageSize={pageSize}
             currentPage={currentPage}
             onPageChange={this.handlePageChange}
