@@ -13,17 +13,17 @@ class TableHeader extends Component {
         this.props.onSort(sortColumn);
     };
 
-    render() { 
+    render() {
         const { columns } = this.props;
-        return ( 
+        return (
             <thead>
                 <tr>
                     {columns.map(column => <th key={column.path || column.key} onClick={() => this.raiseSort(column.path)}>{column.label}</th>)}
-             
+
                 </tr>
             </thead>
         );
     }
 }
- 
+
 export default TableHeader;
