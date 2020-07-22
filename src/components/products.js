@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { getProducts } from "../services/productsService";
 import { getGenres } from "../services/categoryService";
 import { paginate } from "../utils/paginate";
-import Like from "./common/like";
+import ProductsTable from "./productsTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
+import _ from 'lodash';
 
 import "./products.css";
 
@@ -13,11 +14,12 @@ class Products extends Component {
     products: [],
     genres: [],
     currentPage: 1,
-    pageSize: 4,
+      pageSize: 4,
+      sortColumn: { path: 'product', order: 'asc' }
   };
 
   componentDidMount() {
-    const genres = [{ name: "All Products" }, ...getGenres()];
+    const genres = [{ _id: '', name: "All Products" }, ...getGenres()];
     this.setState({ products: getProducts(), genres: genres });
   }
 
@@ -41,6 +43,10 @@ class Products extends Component {
   handleGenreSelect = (genre) => {
     this.setState({ selectedGenre: genre, currentPage: 1 });
   };
+    
+    handleSort = (path) => {
+        this.setState({ sortColumn: { path, order: 'asc' } });
+    };
 
   render() {
     const { length: count } = this.state.products;
@@ -54,9 +60,10 @@ class Products extends Component {
 
     if (count === 0) return <p>There are no products in the database.</p>;
 
-    const filtered = selectedGenre && selectedGenre._id
-      ? allProducts.filter((p) => p.genre._id === selectedGenre._id)
-      : allProducts;
+    const filtered =
+      selectedGenre && selectedGenre._id
+        ? allProducts.filter((p) => p.genre._id === selectedGenre._id)
+        : allProducts;
     const products = paginate(filtered, currentPage, pageSize);
     return (
       <div className="row">
@@ -69,52 +76,11 @@ class Products extends Component {
         </div>
         <div className="col">
           <p>Showing {filtered.length} products...</p>
-          <table className="table table-striped">
-            <thead>
-              <tr>
-                <th>Image</th>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Stocks</th>
-                <th>Rate</th>
-                <th>Add to Wishlist</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {products.map((product) => (
-                <tr key={product._id}>
-                  <td>
-                    <img src={product.picture} alt="product photo" />
-                  </td>
-                  <td>{product.product}</td>
-                  <td>{product.price}</td>
-                  <td>{product.numberInStock}</td>
-                  <td>{product.dailyRentalRate}</td>
-                  <td>
-                    <Like
-                      liked={product.liked}
-                      onLikeToggle={() => this.handleLike(product)}
-                    />
-                  </td>
-                  <td>
-                    <button className="btn btn-success btn-sm">
-                      Add to Cart
-                    </button>
-                  </td>
-                  <td>
-                    <button
-                      onClick={() => this.handleDelete(product)}
-                      className="btn btn-danger btn-sm"
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <ProductsTable
+            products={products}
+            onLike={this.handleLike}
+            onDelete={this.handleDelete}
+          />
           <Pagination
             itemsCount={filtered.length}
             pageSize={pageSize}
