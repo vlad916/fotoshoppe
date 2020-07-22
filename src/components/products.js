@@ -81,6 +81,7 @@ class Products extends Component {
 
     const { totalCount, data: products } = this.getPagedData();
     return (
+      <div className="container-fluid text-center">
       <div className="row">
         <div className="col-3">
           <ListGroup
@@ -104,6 +105,7 @@ class Products extends Component {
             currentPage={currentPage}
             onPageChange={this.handlePageChange}
           />
+        </div>
         </div>
       </div>
     );

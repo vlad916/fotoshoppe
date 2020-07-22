@@ -12,7 +12,7 @@ function App() {
   return (
     <React.Fragment>
     <Navbar />
-      <main className="container-fluid text-center mt-5">
+      <main className="container-fluid mt-5">
         <Switch>
           <Route path='/login' component={LoginForm}></Route>
           <Route path='/products:id' component={ProductsForm}></Route>
