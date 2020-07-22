@@ -17,7 +17,8 @@ class Products extends Component {
   };
 
   componentDidMount() {
-    this.setState({ products: getProducts(), genres: getGenres() });
+    const genres = [{ name: "All Products" }, ...getGenres()];
+    this.setState({ products: getProducts(), genres: genres });
   }
 
   handleDelete = (product) => {
@@ -37,26 +38,34 @@ class Products extends Component {
     this.setState({ currentPage: page });
   };
 
-    handleGenreSelect = (genre) => {
-        this.setState({ selectedGenre: genre });
+  handleGenreSelect = (genre) => {
+    this.setState({ selectedGenre: genre, currentPage: 1 });
   };
 
   render() {
     const { length: count } = this.state.products;
-    const { pageSize, currentPage, selectedGenre, products: allProducts, genres } = this.state;
+    const {
+      pageSize,
+      currentPage,
+      selectedGenre,
+      products: allProducts,
+      genres,
+    } = this.state;
 
     if (count === 0) return <p>There are no products in the database.</p>;
 
-      const filtered = selectedGenre ? allProducts.filter(p => p.genre._id === selectedGenre._id) : allProducts;
+    const filtered = selectedGenre && selectedGenre._id
+      ? allProducts.filter((p) => p.genre._id === selectedGenre._id)
+      : allProducts;
     const products = paginate(filtered, currentPage, pageSize);
     return (
       <div className="row">
         <div className="col-3">
-                <ListGroup
-                    items={genres}
-                    selectedItem={this.state.selectedGenre}
-                    onItemSelect={this.handleGenreSelect}
-                  />
+          <ListGroup
+            items={genres}
+            selectedItem={this.state.selectedGenre}
+            onItemSelect={this.handleGenreSelect}
+          />
         </div>
         <div className="col">
           <p>Showing {filtered.length} products...</p>
