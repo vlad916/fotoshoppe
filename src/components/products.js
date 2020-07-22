@@ -36,10 +36,8 @@ class Products extends Component {
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
-    
-    handleGenreSelect = (genre) => {
 
-    };
+  handleGenreSelect = (genre) => {};
 
   render() {
     const { length: count } = this.state.products;
@@ -50,8 +48,11 @@ class Products extends Component {
     const products = paginate(allProducts, currentPage, pageSize);
     return (
       <div className="row">
-        <div className="col-2">
-                <ListGroup items={genres} onItemSelect={this.handleGenreSelect}/>
+        <div className="col-3">
+                <ListGroup
+                    items={genres}
+                    onItemSelect={this.handleGenreSelect}
+                  />
         </div>
         <div className="col">
           <p>Showing {count} products...</p>
