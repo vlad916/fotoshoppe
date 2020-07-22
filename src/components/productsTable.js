@@ -2,17 +2,27 @@ import React, { Component } from "react";
 import Like from "./common/like";
 
 class ProductsTable extends Component {
+  raiseSort = (path) => {
+    const sortColumn = { ...this.props.sortColumn };
+    if (sortColumn.path === path)
+      sortColumn.order = sortColumn.order === "asc" ? "desc" : "asc";
+    else {
+      sortColumn.path = path;
+      sortColumn.order = "asc";
+    }
+    this.props.onSort(sortColumn);
+  };
   render() {
-    const { products, onDelete, onLike, onSort } = this.props;
+    const { products, onDelete, onLike } = this.props;
     return (
       <table className="table table-striped">
         <thead>
           <tr>
-            <th>Image</th>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Stocks</th>
-            <th>Rate</th>
+            <th onClick={() => this.raiseSort('image')}>Image</th>
+            <th onClick={() => this.raiseSort('product')}>Product</th>
+            <th onClick={() => this.raiseSort('price')}>Price</th>
+            <th onClick={() => this.raiseSort('numberInStock')}>Stocks</th>
+            <th onClick={() => this.raiseSort('dailyRentalRate')}>Rate</th>
             <th>Add to Wishlist</th>
             <th></th>
             <th></th>

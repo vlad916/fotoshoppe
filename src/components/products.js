@@ -5,7 +5,7 @@ import { paginate } from "../utils/paginate";
 import ProductsTable from "./productsTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
-import _ from 'lodash';
+import _ from "lodash";
 
 import "./products.css";
 
@@ -14,12 +14,12 @@ class Products extends Component {
     products: [],
     genres: [],
     currentPage: 1,
-      pageSize: 4,
-      sortColumn: { path: 'product', order: 'asc' }
+    pageSize: 4,
+    sortColumn: { path: "product", order: "asc" },
   };
 
   componentDidMount() {
-    const genres = [{ _id: '', name: "All Products" }, ...getGenres()];
+    const genres = [{ _id: "", name: "All Products" }, ...getGenres()];
     this.setState({ products: getProducts(), genres: genres });
   }
 
@@ -43,20 +43,17 @@ class Products extends Component {
   handleGenreSelect = (genre) => {
     this.setState({ selectedGenre: genre, currentPage: 1 });
   };
-    
-    handleSort = (path) => {
-        const sortColumn = { ...this.state.sortColumn };
-        if (sortColumn.path === path)
-            sortColumn.order = (sortColumn.order === 'asc') ? 'desc' : 'asc'
-        this.setState({ sortColumn });
-    };
+
+  handleSort = (sortColumn) => {
+    this.setState({ sortColumn });
+  };
 
   render() {
     const { length: count } = this.state.products;
     const {
       pageSize,
       currentPage,
-        selectedGenre,
+      selectedGenre,
       sortColumn,
       products: allProducts,
       genres,
@@ -67,10 +64,10 @@ class Products extends Component {
     const filtered =
       selectedGenre && selectedGenre._id
         ? allProducts.filter((p) => p.genre._id === selectedGenre._id)
-            : allProducts;
-    
-      const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
-    
+        : allProducts;
+
+    const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
+
     const products = paginate(sorted, currentPage, pageSize);
     return (
       <div className="row">
@@ -85,8 +82,10 @@ class Products extends Component {
           <p>Showing {filtered.length} products...</p>
           <ProductsTable
             products={products}
+            sortColumn={sortColumn}
             onLike={this.handleLike}
             onDelete={this.handleDelete}
+            onSort={this.handleSort}
           />
           <Pagination
             itemsCount={filtered.length}
