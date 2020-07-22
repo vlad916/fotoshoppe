@@ -37,25 +37,29 @@ class Products extends Component {
     this.setState({ currentPage: page });
   };
 
-  handleGenreSelect = (genre) => {};
+    handleGenreSelect = (genre) => {
+        this.setState({ selectedGenre: genre });
+  };
 
   render() {
     const { length: count } = this.state.products;
-    const { pageSize, currentPage, products: allProducts, genres } = this.state;
+    const { pageSize, currentPage, selectedGenre, products: allProducts, genres } = this.state;
 
     if (count === 0) return <p>There are no products in the database.</p>;
 
-    const products = paginate(allProducts, currentPage, pageSize);
+      const filtered = selectedGenre ? allProducts.filter(p => p.genre._id === selectedGenre._id) : allProducts;
+    const products = paginate(filtered, currentPage, pageSize);
     return (
       <div className="row">
         <div className="col-3">
                 <ListGroup
                     items={genres}
+                    selectedItem={this.state.selectedGenre}
                     onItemSelect={this.handleGenreSelect}
                   />
         </div>
         <div className="col">
-          <p>Showing {count} products...</p>
+          <p>Showing {filtered.length} products...</p>
           <table className="table table-striped">
             <thead>
               <tr>
@@ -103,7 +107,7 @@ class Products extends Component {
             </tbody>
           </table>
           <Pagination
-            itemsCount={count}
+            itemsCount={filtered.length}
             pageSize={pageSize}
             currentPage={currentPage}
             onPageChange={this.handlePageChange}

@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
   return (
-    <main className="container text-center">
+    <main className="container-fluid text-center">
       <Products />
     </main>
   );
