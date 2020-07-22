@@ -9,9 +9,9 @@ class ProductsTable extends Component {
         { path: 'price', label: 'Price' },
         { path: 'numberInStocks', label: 'Stocks' },
         { path: 'dailyRentalRate', label: 'Rate' },
+        { key: 'like', label: 'Add to Wishlist' },
         {},
-        {},
-        {}
+        { key: 'delete'}
     ];
   render() {
     const { products, onDelete, onLike, onSort, sortColumn } = this.props;
