@@ -12,7 +12,9 @@ class LoginForm extends Component {
     }
 
     handleChange = (e) => {
-        const 
+        const account = { ...this.state.account };
+        account.username = e.currentTarget.value;
+        this.setState({ account });
     };  
     render() { 
         return ( 
