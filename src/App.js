@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Products from './components/products';
+import ProductsForm from './components/productsForm';
 import Navbar from './components/common/navbar';
 import NotFound from './components/notFound';
 
@@ -12,6 +13,7 @@ function App() {
     <Navbar />
       <main className="container-fluid text-center mt-5">
         <Switch>
+          <Route path='/products:id' component={ProductsForm}></Route>
           <Route path="/products" component={Products}></Route>
           <Route path="/not-found" component={NotFound}></Route>
           <Redirect from='/' exact to='/products' />

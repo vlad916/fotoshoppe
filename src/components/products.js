@@ -14,7 +14,7 @@ class Products extends Component {
     genres: [],
     currentPage: 1,
     pageSize: 4,
-    sortColumn: { path: "product", order: "asc" },
+    sortColumn: { path: "title", order: "asc" },
   };
 
   componentDidMount() {

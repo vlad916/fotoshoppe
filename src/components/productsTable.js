@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import TableHeader from './common/tableHeader';
 import Like from "./common/like";
-import { Link } from "react-router-dom";
+
 
 class ProductsTable extends Component {
   columns = [
     { path: "picture", label: "Image" },
     {
-      path: "product", label: "Product",
-      content: product => <Link to={`/products/${product._id}`}>{product.product}</Link>
+      path: "title", label: "Product",
+      content: product => <Link to={`/products/${product._id}`}>{product.title}</Link>
     },
     { path: "price", label: "Price" },
     { path: "numberInStock", label: "Stocks" },
@@ -48,7 +49,7 @@ class ProductsTable extends Component {
               <td>
                 <img src={product.picture} alt="product photo" />
               </td>
-              <td>{product.product}</td>
+              <td>{product.title}</td>
               <td>{product.price}</td>
               <td>{product.numberInStock}</td>
               <td>{product.dailyRentalRate}</td>
