@@ -45,7 +45,10 @@ class Products extends Component {
   };
     
     handleSort = (path) => {
-        this.setState({ sortColumn: { path, order: 'asc' } });
+        const sortColumn = { ...this.state.sortColumn };
+        if (sortColumn.path === path)
+            sortColumn.order = (sortColumn.order === 'asc') ? 'desc' : 'asc'
+        this.setState({ sortColumn });
     };
 
   render() {
@@ -53,7 +56,8 @@ class Products extends Component {
     const {
       pageSize,
       currentPage,
-      selectedGenre,
+        selectedGenre,
+      sortColumn,
       products: allProducts,
       genres,
     } = this.state;
@@ -63,8 +67,11 @@ class Products extends Component {
     const filtered =
       selectedGenre && selectedGenre._id
         ? allProducts.filter((p) => p.genre._id === selectedGenre._id)
-        : allProducts;
-    const products = paginate(filtered, currentPage, pageSize);
+            : allProducts;
+    
+      const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
+    
+    const products = paginate(sorted, currentPage, pageSize);
     return (
       <div className="row">
         <div className="col-3">

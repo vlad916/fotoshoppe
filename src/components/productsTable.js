@@ -3,7 +3,7 @@ import Like from "./common/like";
 
 class ProductsTable extends Component {
   render() {
-    const { products, onDelete, onLike } = this.props;
+    const { products, onDelete, onLike, onSort } = this.props;
     return (
       <table className="table table-striped">
         <thead>
