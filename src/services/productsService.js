@@ -3,7 +3,7 @@ import * as genresAPI from "./categoryService";
 const products = [
     {
         _id: "5b21ca3eeb7f6fbccd471815",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Nikon 50mm 1.8g",
         genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Lens" },
         numberInStock: 6,
@@ -13,7 +13,7 @@ const products = [
     },
     {
         _id: "5b21ca3eeb7f6fbccd471816",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Nikon 50mm 1.8g",
         genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Lens" },
         numberInStock: 5,
@@ -22,7 +22,7 @@ const products = [
     },
     {
         _id: "5b21ca3eeb7f6fbccd471817",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Sb-700",
         genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Flash" },
         numberInStock: 8,
@@ -31,7 +31,7 @@ const products = [
     },
     {
         _id: "5b21ca3eeb7f6fbccd471819",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Nikon D750",
         genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Body" },
         numberInStock: 7,
@@ -40,7 +40,7 @@ const products = [
     },
     {
         _id: "5b21ca3eeb7f6fbccd47181a",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Nikon D850",
         genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Body" },
         numberInStock: 7,
@@ -49,7 +49,7 @@ const products = [
     },
     {
         _id: "5b21ca3eeb7f6fbccd47181b",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Nikon D6",
         genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Body" },
         numberInStock: 7,
@@ -58,7 +58,7 @@ const products = [
     },
     {
         _id: "5b21ca3eeb7f6fbccd47181e",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Sb-910",
         genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Flash" },
         numberInStock: 7,
@@ -67,7 +67,7 @@ const products = [
     },
     {
         _id: "5b21ca3eeb7f6fbccd47181f",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Sb-5000",
         genre: { _id: "5b21ca3eeb7f6fbccd471820", name: "Flash" },
         numberInStock: 4,
@@ -76,7 +76,7 @@ const products = [
     },
     {
         _id: "5b21ca3eeb7f6fbccd471821",
-        image: "assets/1.jpg",
+        picture: "assets/1.jpg",
         product: "Nikon 50mm 1.8g",
         genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Lens" },
         numberInStock: 7,

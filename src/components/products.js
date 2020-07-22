@@ -39,7 +39,7 @@ class Products extends Component {
     return (
       <React.Fragment>
         <p>Showing {count} products...</p>
-        <table className="table">
+        <table className="table table-striped">
           <thead>
             <tr>
               <th>Image</th>
@@ -47,15 +47,16 @@ class Products extends Component {
               <th>Price</th>
               <th>Stocks</th>
               <th>Rate</th>
-              <th></th>
-              <th></th>
+              <th>Add to Wishlist</th>
+                        <th></th>
+                        <th></th>
             </tr>
           </thead>
           <tbody>
             {products.map((product) => (
               <tr key={product._id}>
                 <td>
-                  <img src={product.image} />
+                  <img src={product.picture} alt='product photo' />
                 </td>
                 <td>{product.product}</td>
                 <td>{product.price}</td>
@@ -66,7 +67,10 @@ class Products extends Component {
                     liked={product.liked}
                     onLikeToggle={() => this.handleLike(product)}
                   />
-                </td>
+                    </td>
+                    <td>
+                        <button className='btn btn-success btn-sm'>Add to Cart</button>
+                    </td>
                 <td>
                   <button
                     onClick={() => this.handleDelete(product)}
