@@ -13,6 +13,7 @@ const Input = (props) => {
                 type="text"
                 className="form-control"
             />
+        <div className="alert alert-danger"></div>
         </div>
      );
 }
