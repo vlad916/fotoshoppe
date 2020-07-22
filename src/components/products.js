@@ -5,8 +5,7 @@ import { paginate } from "../utils/paginate";
 import ProductsTable from "./productsTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
-import _, { toArray } from "lodash";
-
+import _ from "lodash";
 import "./products.css";
 
 class Products extends Component {

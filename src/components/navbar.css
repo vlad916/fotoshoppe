@@ -1,0 +1,10 @@
+#header nav {
+  background-color: rgb(12, 136, 181);
+}
+#header a:hover {
+  color: black;
+}
+#header a {
+  color: white;
+  font-size: 20px;
+}
