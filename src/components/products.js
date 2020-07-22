@@ -1,48 +1,71 @@
 import React, { Component } from "react";
 import { getProducts } from "../services/productsService";
+import Like from './common/like';
 import "./products.css";
 
 class Products extends Component {
   state = {
     products: getProducts(),
   };
+
+  handleDelete = (product) => {
+    const products = this.state.products.filter((p) => p._id !== product._id);
+    this.setState({ products });
+  };
     
-    handleDelete = (product) => {
-        const products = this.state.products.filter(p => p._id !== product._id);
+    handleLike = (product) => {
+        const products = [...this.state.products];
+        const index = products.indexOf(product);
+        products[index] = { ...products[index] };
+        products[index].liked = !products[index].liked;
         this.setState({ products });
     };
 
   render() {
-    const { products } = this.state;
+    const { length: count } = this.state.products;
+
+    if (count === 0) return <p>There are no products in the database.</p>;
     return (
-      <table className="table">
-        <thead>
-                <tr>
-            <th>Image</th>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Stocks</th>
-            <th>Rate</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((product) => (
-              <tr key={product._id}>
-              <td>
-                <img src={product.image} />
-              </td>
-              <td>{product.product}</td>
-              <td>{product.price}</td>
-              <td>{product.numberInStock}</td>
-                  <td>{product.dailyRentalRate}</td>
-                  <td>
-                      <button onClick={ () => this.handleDelete (product)} className="btn btn-danger btn-sm">Delete</button>
-                  </td>
+      <React.Fragment>
+        <p>Showing {count} products...</p>
+        <table className="table">
+          <thead>
+            <tr>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Stocks</th>
+              <th>Rate</th>
+                        <th></th>
+                        <th></th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {this.state.products.map((product) => (
+              <tr key={product._id}>
+                <td>
+                  <img src={product.image} />
+                </td>
+                <td>{product.product}</td>
+                <td>{product.price}</td>
+                <td>{product.numberInStock}</td>
+                    <td>{product.dailyRentalRate}</td>
+                    <td>
+                        <Like liked={product.liked} onLikeToggle={()=> this.handleLike(product)}/>
+                    </td>
+                <td>
+                  <button
+                    onClick={() => this.handleDelete(product)}
+                    className="btn btn-danger btn-sm"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </React.Fragment>
     );
   }
 }
