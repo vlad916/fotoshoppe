@@ -95,13 +95,13 @@ export function getProduct(id) {
 
 export function saveProduct(product) {
     let productList = products.find(p => p._id === product._id) || {};
-    productList.name = product.name;
+    productList.title = product.title;
     productList.genre = genresAPI.genres.find(g => g._id === product.genreId);
     productList.numberInStock = product.numberInStock;
     productList.dailyRentalRate = product.dailyRentalRate;
 
     if (!productList._id) {
-        productList._id = Date.now();
+        productList._id = Date.now().toString();
         products.push(productList);
     }
 
