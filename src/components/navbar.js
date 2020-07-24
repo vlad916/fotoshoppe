@@ -37,6 +37,11 @@ const NavBar = () => {
                   Sign Up
                 </NavLink>
               </li>
+              <li>
+                <NavLink className="nav-link" to="/cart">
+                  <i className="fas fa-shopping-cart"></i>
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

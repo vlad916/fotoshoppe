@@ -6,6 +6,7 @@ import Navbar from './components/navbar';
 import LoginForm from './components/loginForm';
 import RegisterForm from './components/registerForm';
 import NotFound from './components/notFound';
+import ShoppingCart from './components/shoppingCart';
 
 import './App.css';
 
@@ -15,6 +16,7 @@ function App() {
     <Navbar />
       <main className="container-fluid mt-5">
         <Switch>
+          <Route path='/cart' component={ShoppingCart}></Route>
           <Route path='/register' component={RegisterForm}></Route>
           <Route path='/login' component={LoginForm}></Route>
           <Route path='/products:id' component={ProductsForm}></Route>
