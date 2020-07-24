@@ -1,22 +1,29 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
-import TableHeader from './common/tableHeader';
+import { Link } from "react-router-dom";
+import TableHeader from "./common/tableHeader";
 import Like from "./common/like";
-
 
 class ProductsTable extends Component {
   columns = [
     { path: "picture", label: "Image" },
     {
-      path: "title", label: "Product",
-      content: product => <Link to={`/products/${product._id}`}>{product.title}</Link>
+      path: "title",
+      label: "Product",
+      content: (product) => (
+        <Link to={`/products/${product._id}`}>{product.title}</Link>
+      ),
     },
     { path: "price", label: "Price" },
     { path: "numberInStock", label: "Stocks" },
     { path: "dailyRentalRate", label: "Rate" },
     {
       key: "like",
-      content: product => <Like liked={product.liked} onClick={() => this.props.onLike(product)} />,
+      content: (product) => (
+        <Like
+          liked={product.liked}
+          onClick={() => this.props.onLike(product)}
+        />
+      ),
       label: "Add to Wishlist",
     },
     // {
@@ -24,7 +31,7 @@ class ProductsTable extends Component {
     // },
     {
       key: "delete",
-      content: product => (
+      content: (product) => (
         <button
           onClick={() => this.props.onDelete(product)}
           className="btn btn-danger btn-sm"
@@ -38,16 +45,20 @@ class ProductsTable extends Component {
     const { products, onDelete, onLike, onSort, sortColumn } = this.props;
     return (
       <table className="table table-striped">
-            <TableHeader
-                columns={this.columns}
-                sortColumn={sortColumn}
-                onSort={onSort}
-            />
+        <TableHeader
+          columns={this.columns}
+          sortColumn={sortColumn}
+          onSort={onSort}
+        />
         <tbody>
           {products.map((product) => (
             <tr key={product._id}>
               <td>
-                <img className='img-fluid products' src={product.picture} alt="product photo" />
+                <img
+                  className="img-fluid products"
+                  src={product.picture}
+                  alt="product photo"
+                />
               </td>
               <td>{product.title}</td>
               <td>{product.price}</td>

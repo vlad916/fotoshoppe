@@ -89,7 +89,7 @@ const products = [
         picture: "assets/6.jpg",
         genre: { _id: "5b21ca3eeb7f6fbccd471814", name: "Camera Body" },
         numberInStock: 7,
-        dailyRentalRate: 3.5,
+        dailyRentalRate: 4.8,
         price: "$150/day"
     },
     {

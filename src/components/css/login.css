@@ -1,7 +1,13 @@
 .login {
-    width: 500px;
+  width: 500px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px gray;
+  padding: 30px;
 }
 
 .log {
-    text-align: center;
+  text-align: center;
 }
