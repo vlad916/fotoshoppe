@@ -14,3 +14,5 @@ const SearchProduct = ({ value, onChange }) => {
 };
 
 export default SearchProduct;
+
+// style = {{ width: '250px' }}

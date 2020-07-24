@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import ProductsTable from "./productsTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
+import SearchProduct from "./searchProduct";
 import _ from "lodash";
 import "./css/products.css";
 
@@ -14,6 +15,8 @@ class Products extends Component {
     products: [],
     genres: [],
     currentPage: 1,
+    searchQuery: "",
+    selectedGenre: null,
     pageSize: 4,
     sortColumn: { path: "title", order: "asc" },
   };
@@ -41,7 +44,11 @@ class Products extends Component {
   };
 
   handleGenreSelect = (genre) => {
-    this.setState({ selectedGenre: genre, currentPage: 1 });
+    this.setState({ selectedGenre: genre, searchQuery: "", currentPage: 1 });
+  };
+
+  handleSearch = (query) => {
+    this.setState({ searchQuery: query, selectedGenre: null, currentPage: 1 });
   };
 
   handleSort = (sortColumn) => {
@@ -53,14 +60,18 @@ class Products extends Component {
       pageSize,
       currentPage,
       selectedGenre,
+      searchQuery,
       sortColumn,
       products: allProducts,
     } = this.state;
 
-    const filtered =
-      selectedGenre && selectedGenre._id
-        ? allProducts.filter((p) => p.genre._id === selectedGenre._id)
-        : allProducts;
+    let filtered = allProducts;
+    if (searchQuery)
+      filtered = allProducts.filter((p) =>
+        p.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+      );
+    else if (selectedGenre && selectedGenre._id)
+      filtered = allProducts.filter((p) => p.genre._id === selectedGenre._id);
 
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
 
@@ -71,7 +82,7 @@ class Products extends Component {
 
   render() {
     const { length: count } = this.state.products;
-    const { pageSize, currentPage, sortColumn, genres } = this.state;
+    const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
 
     if (count === 0)
       return (
@@ -85,6 +96,7 @@ class Products extends Component {
       <div className="container-fluid text-center">
         <div className="row">
           <div className="col-3">
+            <SearchProduct value={searchQuery} onChange={this.handleSearch} />
             <Link
               to="/products/new"
               className="btn btn-primary"
@@ -95,7 +107,7 @@ class Products extends Component {
           </div>
           <div className="col">
             <ListGroup
-              items={genres}
+              items={this.state.genres}
               selectedItem={this.state.selectedGenre}
               onItemSelect={this.handleGenreSelect}
             />
