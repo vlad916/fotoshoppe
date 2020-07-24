@@ -17,7 +17,7 @@ class Products extends Component {
     currentPage: 1,
     searchQuery: "",
     selectedGenre: null,
-    pageSize: 4,
+    pageSize: 5,
     sortColumn: { path: "title", order: "asc" },
   };
 
