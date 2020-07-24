@@ -5,7 +5,7 @@ import { paginate } from "../utils/paginate";
 import ProductsTable from "./productsTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import _ from "lodash";
 import "./products.css";
 
@@ -73,20 +73,18 @@ class Products extends Component {
     const { length: count } = this.state.products;
     const { pageSize, currentPage, sortColumn, genres } = this.state;
 
-    if (count === 0) return <p>There are no products in the database.</p>;
+    if (count === 0)
+      return (
+        <p style={{ textAlign: "center" }}>
+          There are no products in the database...
+        </p>
+      );
 
     const { totalCount, data: products } = this.getPagedData();
     return (
       <div className="container-fluid text-center">
         <div className="row">
           <div className="col-3">
-            <ListGroup
-              items={genres}
-              selectedItem={this.state.selectedGenre}
-              onItemSelect={this.handleGenreSelect}
-            />
-          </div>
-          <div className="col">
             <Link
               to="/products/new"
               className="btn btn-primary"
@@ -94,6 +92,13 @@ class Products extends Component {
             >
               Suggest a product
             </Link>
+          </div>
+          <div className="col">
+            <ListGroup
+              items={genres}
+              selectedItem={this.state.selectedGenre}
+              onItemSelect={this.handleGenreSelect}
+            />
             <p>Showing {totalCount} products...</p>
             <ProductsTable
               products={products}
