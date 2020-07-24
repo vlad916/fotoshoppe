@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { getProducts } from "../services/productsService";
 import { getGenres } from "../services/categoryService";
 import { paginate } from "../utils/paginate";
+import { Link } from "react-router-dom";
 import ProductsTable from "./productsTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
-import { Link } from "react-router-dom";
 import _ from "lodash";
-import "./products.css";
+import "./css/products.css";
 
 class Products extends Component {
   state = {
@@ -15,8 +15,6 @@ class Products extends Component {
     genres: [],
     currentPage: 1,
     pageSize: 4,
-    searchQuery: '',
-    selectedGenre: null,
     sortColumn: { path: "title", order: "asc" },
   };
 
@@ -43,15 +41,11 @@ class Products extends Component {
   };
 
   handleGenreSelect = (genre) => {
-    this.setState({ selectedGenre: genre, searchQuery: '', currentPage: 1 });
+    this.setState({ selectedGenre: genre, currentPage: 1 });
   };
 
   handleSort = (sortColumn) => {
     this.setState({ sortColumn });
-  };
-
-  handleSearch = (query) => {
-    this.setState({ searchQuery: query, selectedGenre: null, currentPage: 1 });
   };
 
   getPagedData = () => {
@@ -59,7 +53,6 @@ class Products extends Component {
       pageSize,
       currentPage,
       selectedGenre,
-      searchQuery,
       sortColumn,
       products: allProducts,
     } = this.state;
@@ -99,10 +92,6 @@ class Products extends Component {
             >
               Suggest a product
             </Link>
-            <SearchProduct
-              value={searchQuery}
-              onChange={this.handleSearch}
-            />
           </div>
           <div className="col">
             <ListGroup
