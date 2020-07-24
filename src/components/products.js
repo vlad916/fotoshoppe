@@ -104,6 +104,16 @@ class Products extends Component {
             >
               Suggest a product
             </Link>
+            <img
+              className="img-fluid cover"
+              src="assets/cover.jpg"
+              alt="Responsive image"
+            />
+            <img
+              className="img-fluid cover"
+              src="assets/cover2.jpg"
+              alt="Responsive image"
+            />
           </div>
           <div className="col">
             <ListGroup
@@ -111,7 +121,9 @@ class Products extends Component {
               selectedItem={this.state.selectedGenre}
               onItemSelect={this.handleGenreSelect}
             />
-            <h4 style={{ marginBottom: '50px'}}>Showing {totalCount} products...</h4>
+            <h4 style={{ marginBottom: "50px" }}>
+              Showing {totalCount} products...
+            </h4>
             <ProductsTable
               products={products}
               sortColumn={sortColumn}

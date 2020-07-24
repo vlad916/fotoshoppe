@@ -47,7 +47,7 @@ class ProductsTable extends Component {
           {products.map((product) => (
             <tr key={product._id}>
               <td>
-                <img src={product.picture} alt="product photo" />
+                <img className='img-fluid products' src={product.picture} alt="product photo" />
               </td>
               <td>{product.title}</td>
               <td>{product.price}</td>
