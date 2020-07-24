@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const ListGroup = (props) => {
   const {
     items,
@@ -10,7 +9,7 @@ const ListGroup = (props) => {
     selectedItem,
   } = props;
   return (
-    <ul className="list-group list-group-horizontal-sm mb-4">
+    <ul className="list-group list-group-horizontal-sm mb-4 group">
       {items.map((item) => (
         <li
           onClick={() => onItemSelect(item)}
