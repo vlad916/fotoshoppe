@@ -17,6 +17,13 @@
 .text {
   margin-left: 20px;
   font-family: cursive, sans-serif;
-  font-size: 30px;
+  font-size: 40px;
 }
 
+button {
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  box-shadow: 3px 3px 3px gray;
+  border-radius: 3px;
+}
