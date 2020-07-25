@@ -9,7 +9,8 @@ const NavBar = () => {
         <div className="container-fluid">
           <span className="navbar-text">
             <Link className="nav-link" to="/">
-              <h1>Fotoshoppe</h1>
+              <img className="img-fluid logo" src="assets/logo.png" alt="Responsive image"/>
+              <span className="text">Fotoshoppe</span>
             </Link>
           </span>
           <button
