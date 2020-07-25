@@ -114,6 +114,9 @@ class Products extends Component {
               src="assets/cover2.jpg"
               alt="Responsive image"
             />
+            <p id="copy">
+              <span>&#169;</span>2020 Fotoshoppe
+            </p>
           </div>
           <div className="col">
             <ListGroup

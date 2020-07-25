@@ -16,3 +16,9 @@
   box-shadow: 3px 3px 3px gray;
   border-radius: 3px;
 }
+
+#copy {
+  font-family: cursive, sans-serif;
+  margin-top: 10px;
+  text-shadow: 3px 3px 3px gray;
+}
