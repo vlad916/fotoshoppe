@@ -124,9 +124,9 @@ class Products extends Component {
               selectedItem={this.state.selectedGenre}
               onItemSelect={this.handleGenreSelect}
             />
-            <h4 style={{ marginBottom: "50px" }}>
+            <h5 style={{ marginBottom: "50px" }}>
               Showing {totalCount} products...
-            </h4>
+            </h5>
             <ProductsTable
               products={products}
               sortColumn={sortColumn}
