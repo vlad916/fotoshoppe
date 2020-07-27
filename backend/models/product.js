@@ -34,4 +34,4 @@ const Product = mongoose.model('Products', new mongoose.Schema({
     }
 }));
 
-exports.Movie = Movie;
+exports.Product = Product;
