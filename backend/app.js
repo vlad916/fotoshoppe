@@ -13,4 +13,10 @@ app.use(express.json());
 //     res.send("We are online");
 // });
 
+// require('./routes/genres.js')(app);
+// require('./routes/products.js')(app);
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/photoequipment");
+
+
 app.listen(PORT, () => console.log(`Server listening on PORT ${PORT}`));

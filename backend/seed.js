@@ -139,6 +139,7 @@ async function seed() {
       ...product,
       genre: { _id: genreId, name: genre.name },
     }));
+    await Product.insertMany(products);
   }
   mongoose.disconnect();
 

@@ -9,6 +9,10 @@ const Product = mongoose.model('Products', new mongoose.Schema({
         minlength: 5,
         maxlength: 255
     },
+    picture: {
+        type: String,
+        required: true
+    },
     genre: {
         type: genreSchema,
         required: true
@@ -27,10 +31,10 @@ const Product = mongoose.model('Products', new mongoose.Schema({
         max: 255
     },
     price: {
-        type: Number,
-        required: true,
-        min: 0,
-        max: 255
+        type: String,
+        trim: true,
+        minlength: 5,
+        maxlength: 255
     }
 }));
 
