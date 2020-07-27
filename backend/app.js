@@ -11,9 +11,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-// Routes
-app.use(require('./routes/genres.js'));
-app.use(require('./routes/products'));
+require("./startup/routes")(app);
+
+
 
 // Mongodv connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/photoequipment", {
