@@ -1,22 +1,25 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+// Sets up the port for the server
 const PORT = process.env.PORT || 5000;
 
 const app = express();
 
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
 
+// Routes
+app.use(require('./routes/genres.js'));
+app.use(require('./routes/products'));
 
-// app.get('/', (req, res) => {
-//     res.send("We are online");
-// });
+// Mongodv connection
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/photoequipment", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 
-// require('./routes/genres.js')(app);
-// require('./routes/products.js')(app);
-
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/photoequipment");
-
-
+// Starts the server
 app.listen(PORT, () => console.log(`Server listening on PORT ${PORT}`));
