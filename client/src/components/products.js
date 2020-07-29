@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { getProducts } from "../services/productsService";
-import { getGenres } from "../services/categoryService";
+import { getProducts } from "../services/prodService";
+import { getGenres } from "../services/catService";
 import { paginate } from "../utils/paginate";
 import { Link } from "react-router-dom";
 import ProductsTable from "./productsTable";
@@ -21,10 +21,19 @@ class Products extends Component {
     sortColumn: { path: "title", order: "asc" },
   };
 
-  componentDidMount() {
-    const genres = [{ _id: "", name: "All Products" }, ...getGenres()];
-    this.setState({ products: getProducts(), genres: genres });
-  }
+  async componentDidMount() {
+    const { data } = await getGenres();
+    const genres = [{ _id: "", name: "All Products" }, ...data];
+
+    const { data: products } = await getProducts();
+    this.setState({ products, genres: genres });
+  };
+
+
+  // componentDidMount() {
+  //   const genres = [{ _id: "", name: "All Products" }, ...getGenres()];
+  //   this.setState({ products: getProducts(), genres: genres });
+  // }
 
   handleDelete = (product) => {
     const products = this.state.products.filter((p) => p._id !== product._id);

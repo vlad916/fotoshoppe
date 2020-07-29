@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // Sets up the port for the server
 const PORT = process.env.PORT || 5000;
@@ -10,10 +11,10 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
+app.use(cors());
 
+// Routes
 require("./startup/routes")(app);
-
-
 
 // Mongodv connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/photoequipment", {
