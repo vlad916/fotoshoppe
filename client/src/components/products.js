@@ -29,7 +29,6 @@ class Products extends Component {
     this.setState({ products, genres: genres });
   };
 
-
   // componentDidMount() {
   //   const genres = [{ _id: "", name: "All Products" }, ...getGenres()];
   //   this.setState({ products: getProducts(), genres: genres });
@@ -105,14 +104,16 @@ class Products extends Component {
       <div className="container-fluid text-center">
         <div className="row">
           <div className="col-3">
-            <SearchProduct value={searchQuery} onChange={this.handleSearch} />
-            <Link
+            <SearchProduct
+              value={searchQuery}
+              onChange={this.handleSearch} />
+            {/* <Link
               to="/products/new"
               className="btn btn-primary"
               style={{ marginBottom: 20 }}
             >
               Suggest a product
-            </Link>
+            </Link> */}
             <img
               className="img-fluid cover"
               src="assets/cover.jpg"

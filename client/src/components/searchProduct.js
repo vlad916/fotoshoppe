@@ -3,6 +3,7 @@ import React from "react";
 const SearchProduct = ({ value, onChange }) => {
   return (
     <input
+      style={{ marginLeft: '11px' }}
       type="text"
       name="query"
       className="form-control my-3"
