@@ -126,9 +126,8 @@ const data = [
 ];
 
 async function seed() {
-  await mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/photoequipment"
-  );
+  await mongoose.connect(config.get("db"));
+
 
   await Product.deleteMany({});
   await Genre.deleteMany({});
