@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { getProducts } from "../services/prodService";
 import { getGenres } from "../services/catService";
 import { paginate } from "../utils/paginate";
-import { Link } from "react-router-dom";
 import ProductsTable from "./productsTable";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
@@ -28,11 +27,6 @@ class Products extends Component {
     const { data: products } = await getProducts();
     this.setState({ products, genres: genres });
   };
-
-  // componentDidMount() {
-  //   const genres = [{ _id: "", name: "All Products" }, ...getGenres()];
-  //   this.setState({ products: getProducts(), genres: genres });
-  // }
 
   handleDelete = (product) => {
     const products = this.state.products.filter((p) => p._id !== product._id);
@@ -107,13 +101,6 @@ class Products extends Component {
             <SearchProduct
               value={searchQuery}
               onChange={this.handleSearch} />
-            {/* <Link
-              to="/products/new"
-              className="btn btn-primary"
-              style={{ marginBottom: 20 }}
-            >
-              Suggest a product
-            </Link> */}
             <img
               className="img-fluid cover"
               src="assets/cover.jpg"
@@ -134,9 +121,9 @@ class Products extends Component {
               selectedItem={this.state.selectedGenre}
               onItemSelect={this.handleGenreSelect}
             />
-            <h5 style={{ marginBottom: "50px" }}>
+            <p style={{ marginBottom: "50px" }}>
               Showing {totalCount} products...
-            </h5>
+            </p>
             <ProductsTable
               products={products}
               sortColumn={sortColumn}
