@@ -1,0 +1,146 @@
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:51:16.898Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:51:16.937Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:51:19.327Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:51:19.366Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:52:31.360Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:52:31.615Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:52:40.141Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:52:40.245Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:52:53.712Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:52:53.755Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:54:39.933Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:54:39.955Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:54:45.928Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:54:45.949Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:54:47.820Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:54:47.869Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:57:25.943Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:57:25.979Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:57:51.613Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:57:51.634Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:57:53.138Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:57:53.168Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:58:05.069Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:58:05.113Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:58:21.092Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:58:21.134Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:59:05.753Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:59:05.800Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T13:59:16.774Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T13:59:16.795Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T14:00:09.340Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T14:00:09.375Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T14:00:46.036Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T14:00:46.147Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T14:02:27.330Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T14:02:27.350Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T14:02:36.178Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T14:02:36.198Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T14:03:05.194Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T14:03:05.213Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T14:03:48.956Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T14:03:48.981Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T14:05:39.598Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T14:05:39.633Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-29T14:08:00.357Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-29T14:08:00.389Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:18:57.296Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:18:57.354Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:22:20.615Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:22:20.658Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:23:43.358Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:23:43.389Z"}
+{"message":"Genre is not defined","stack":"ReferenceError: Genre is not defined\n    at /Volumes/T5/project 3/signingIn/backend/routes/genres.js:8:18\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express-async-errors/index.js:17:17\n    at Layer.handle [as handle_request] (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/route.js:112:3)\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express-async-errors/index.js:17:17\n    at Layer.handle [as handle_request] (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/layer.js:95:5)\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:335:12)\n    at next (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:174:3)\n    at router (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:47:12)\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express-async-errors/index.js:17:17\n    at Layer.handle [as handle_request] (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:317:13)\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:284:7","level":"error","timestamp":"2020-07-31T01:25:19.271Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:25:52.741Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:25:52.767Z"}
+{"message":"Genre is not defined","stack":"ReferenceError: Genre is not defined\n    at /Volumes/T5/project 3/signingIn/backend/routes/genres.js:8:18\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express-async-errors/index.js:17:17\n    at Layer.handle [as handle_request] (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/route.js:137:13)\n    at Route.dispatch (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/route.js:112:3)\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express-async-errors/index.js:17:17\n    at Layer.handle [as handle_request] (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/layer.js:95:5)\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:281:22\n    at Function.process_params (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:335:12)\n    at next (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:275:10)\n    at Function.handle (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:174:3)\n    at router (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:47:12)\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express-async-errors/index.js:17:17\n    at Layer.handle [as handle_request] (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/layer.js:95:5)\n    at trim_prefix (/Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:317:13)\n    at /Volumes/T5/project 3/signingIn/backend/node_modules/express/lib/router/index.js:284:7","level":"error","timestamp":"2020-07-31T01:25:56.668Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:26:17.620Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:26:17.651Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:26:21.522Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:26:21.549Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:27:09.579Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:27:09.625Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:36:24.043Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:36:24.072Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:37:16.914Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:37:16.954Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:38:31.347Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:38:31.365Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T01:38:33.394Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T01:38:33.429Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:38:39.993Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:38:40.079Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:38:46.778Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:38:46.911Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:39:19.180Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:39:19.236Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:39:29.376Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:39:29.407Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:40:03.521Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:40:03.576Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:40:09.541Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:40:09.593Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:40:56.095Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:40:56.126Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:41:15.553Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:41:15.587Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:41:35.780Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:41:35.800Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:41:46.710Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:41:46.755Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:41:56.050Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:41:56.073Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:43:39.605Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:43:39.628Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:45:11.019Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:45:11.081Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:46:49.801Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:46:49.816Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:47:03.802Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:47:03.848Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:47:20.963Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:47:20.990Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:48:18.962Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:48:18.992Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:51:51.159Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:51:51.180Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T02:51:52.757Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T02:51:52.792Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T03:54:40.407Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T03:54:40.434Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:13:04.376Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:13:04.434Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:14:16.176Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:14:16.212Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:14:46.402Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:14:46.426Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:19:09.876Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:19:09.936Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:20:16.848Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:20:16.899Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:21:20.271Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:21:20.375Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:21:46.701Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:21:46.738Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:22:04.653Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:22:04.742Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T04:58:26.103Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T04:58:26.139Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T05:00:06.344Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T05:00:06.520Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T07:54:07.949Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T07:54:07.984Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T08:02:40.515Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T08:02:40.571Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T08:03:24.308Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T08:03:24.433Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T08:03:34.043Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T08:03:34.072Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T08:04:48.857Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T08:04:48.881Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T08:04:54.154Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T08:04:54.199Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T09:34:12.047Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T09:34:12.081Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-07-31T10:50:19.073Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-07-31T10:50:19.118Z"}
