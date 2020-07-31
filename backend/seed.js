@@ -1,6 +1,7 @@
 const { Genre } = require("./models/genre");
 const { Product } = require("./models/product");
 const mongoose = require("mongoose");
+const config = require("config");
 
 const data = [
   {
@@ -128,7 +129,6 @@ const data = [
 async function seed() {
   await mongoose.connect(config.get("db"));
 
-
   await Product.deleteMany({});
   await Genre.deleteMany({});
 
@@ -146,3 +146,7 @@ async function seed() {
 }
 
 seed();
+
+
+
+await mongoose.connect(config.get("db"));

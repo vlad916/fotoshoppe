@@ -1,22 +1,18 @@
-const express = require('express');
-const winston = require('winston');
-const config = require('config')
+const winston = require("winston");
+const express = require("express");
+const config = require("config");
 const app = express();
 
-// routes
-// require("./startup/logging")();
-// require("./startup/cors")(app);
-// require("./startup/routes")(app);
-// require("./startup/db")();
-// require("./startup/config")();
-// require("./startup/validation")();
+require("./startup/logging")();
+require("./startup/cors")(app);
+require("./startup/routes")(app);
+require("./startup/db")();
+require("./startup/config")();
+require("./startup/validation")();
 
-
-
-// Mongodb connection
-const PORT = process.env.PORT || config.get('port');
-const server = app.listen(PORT, () => 
-    winston.info(`Listening on PORT ${PORT}...`)
+const port = process.env.PORT || config.get("port");
+const server = app.listen(port, () =>
+  winston.info(`Listening on port ${port}...`)
 );
 
-module.exports = server; 
+module.exports = server;
