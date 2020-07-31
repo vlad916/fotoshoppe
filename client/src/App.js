@@ -1,19 +1,18 @@
-import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import Products from './components/products';
-import Navbar from './components/navbar';
-import LoginForm from './components/loginForm';
-import RegisterForm from './components/registerForm';
-import NotFound from './components/notFound';
+import React, { Component } from 'react';
+import { Route, Switch, Redirect } from "react-router-dom";
+import Products from "./components/products";
+import Navbar from "./components/navbar";
+import LoginForm from "./components/loginForm";
+import RegisterForm from "./components/registerForm";
+import NotFound from "./components/notFound";
 import Logout from "./components/logout";
 import auth from "./services/authService";
-import ShoppingCart from './components/shoppingCart';
-
-import './App.css';
+import ShoppingCart from "./components/shoppingCart";
+import "./App.css";
 
 class App extends Component {
   state = {};
-
+  
   componentDidMount() {
     const user = auth.getCurrentUser();
     this.setState({ user });
@@ -24,7 +23,7 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        <Navbar user={user} />
+        <Navbar user={user}/>
         <main className="container-fluid mt-5">
           <Switch>
             <Route path="/cart" component={ShoppingCart}></Route>

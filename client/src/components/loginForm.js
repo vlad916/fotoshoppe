@@ -38,12 +38,12 @@ class LoginForm extends Form {
     return (
       <div className="container">
         <div className='login'>
-          <h3 className='log'>Sign In</h3>
-          <form onSubmit={this.handleSubmit}>
-            {this.renderInput("username", "Username")}
-            {this.renderInput("password", "Password", "password")}
-            {this.renderButton("Sign In")}
-          </form>
+        <h3 className='log'>Sign In</h3>
+        <form onSubmit={this.handleSubmit}>
+          {this.renderInput("username", "Username")}
+          {this.renderInput("password", "Password", "password")}
+          {this.renderButton("Sign In")}
+        </form>
         </div>
       </div>
     );

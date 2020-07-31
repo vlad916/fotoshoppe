@@ -98,9 +98,7 @@ class Products extends Component {
       <div className="container-fluid text-center">
         <div className="row">
           <div className="col-3">
-            <SearchProduct
-              value={searchQuery}
-              onChange={this.handleSearch} />
+            <SearchProduct value={searchQuery} onChange={this.handleSearch} />
             <img
               className="img-fluid cover"
               src="assets/cover.jpg"
