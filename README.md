@@ -23,11 +23,11 @@ When the user loads the page, they should be given the option to create an accou
 * Prop-types
 ___
 
-<img src="public/assets/image1.png">
+<img src="public/assets/images/image1.png">
 
 ___
 
-<img src="public/assets/image2.png">
+<img src="public/assets/images/image2.png">
 
 ___
 
