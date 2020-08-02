@@ -1,5 +1,6 @@
 import React from 'react';
 
+// adding an product/item on a wishlist for future development
 const Like = (props) => {
   const { liked, onLikeToggle } = props;
   let classes = "fa fa-heart";

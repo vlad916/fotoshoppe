@@ -20,7 +20,7 @@ class App extends Component {
 
   render() {
     const { user } = this.state;
-
+    // routes to every component
     return (
       <React.Fragment>
         <Navbar user={user}/>

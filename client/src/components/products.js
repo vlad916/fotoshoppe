@@ -20,6 +20,7 @@ class Products extends Component {
     sortColumn: { path: "title", order: "asc" },
   };
 
+  // fetch all products
   async componentDidMount() {
     const { data } = await getGenres();
     const genres = [{ _id: "", name: "All Products" }, ...data];
@@ -28,11 +29,13 @@ class Products extends Component {
     this.setState({ products, genres: genres });
   };
 
+  // deletes a product
   handleDelete = (product) => {
     const products = this.state.products.filter((p) => p._id !== product._id);
     this.setState({ products });
   };
 
+  // for adding a product to a wishlist in the future
   handleLike = (product) => {
     const products = [...this.state.products];
     const index = products.indexOf(product);
@@ -41,18 +44,22 @@ class Products extends Component {
     this.setState({ products });
   };
 
+  // displaying products by page
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
 
+  // displaying products by category
   handleGenreSelect = (genre) => {
     this.setState({ selectedGenre: genre, searchQuery: "", currentPage: 1 });
   };
 
+  // searching a product
   handleSearch = (query) => {
     this.setState({ searchQuery: query, selectedGenre: null, currentPage: 1 });
   };
 
+  // displaying products by asc or desc order
   handleSort = (sortColumn) => {
     this.setState({ sortColumn });
   };
@@ -86,6 +93,7 @@ class Products extends Component {
     const { length: count } = this.state.products;
     const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
 
+    // this will run if there is no product displayed on the page
     if (count === 0)
       return (
         <p style={{ textAlign: "center" }}>
@@ -120,7 +128,7 @@ class Products extends Component {
               onItemSelect={this.handleGenreSelect}
             />
             <p style={{ marginBottom: "50px" }}>
-              Showing {totalCount} products...
+              Showing {totalCount} items in total...
             </p>
             <ProductsTable
               products={products}

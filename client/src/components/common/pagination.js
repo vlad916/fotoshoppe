@@ -4,7 +4,7 @@ import _ from "lodash";
 
 const Pagination = (props) => {
   const { itemsCount, pageSize, currentPage, onPageChange } = props;
-
+// divides number of products in every page
   const pagesCount = Math.ceil(itemsCount / pageSize);
   if (pagesCount === 1) return null;
   const pages = _.range(1, pagesCount + 1);
@@ -26,6 +26,7 @@ const Pagination = (props) => {
   );
 };
 
+// check type errors
 Pagination.propTypes = {
   itemsCount: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,

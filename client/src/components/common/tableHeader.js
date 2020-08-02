@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 class TableHeader extends Component {
+
+  // sorting all products/items
   raiseSort = (path) => {
     const sortColumn = { ...this.props.sortColumn };
     if (sortColumn.path === path)
@@ -12,6 +14,7 @@ class TableHeader extends Component {
     this.props.onSort(sortColumn);
   };
 
+  // sort icon changes depending on the order
   renderSortIcon = (column) => {
     const { sortColumn } = this.props;
     if (column.path !== sortColumn.path) return null;

@@ -1,5 +1,6 @@
 import React from "react";
 
+// displaying products/items by category
 const ListGroup = (props) => {
   const {
     items,

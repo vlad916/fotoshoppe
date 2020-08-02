@@ -11,12 +11,13 @@ class LoginForm extends Form {
     data: { username: "", password: "" },
     errors: {},
   };
-
+  // validation
   schema = {
     username: Joi.string().required().label("Username"),
     password: Joi.string().required().label("Password"),
   };
 
+  // authenticates the username and password everytime the user is trying to login
   doSubmit = async () => {
     try {
       const { data } = this.state;
