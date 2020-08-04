@@ -158,3 +158,5 @@
 {"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-08-02T10:25:33.135Z"}
 {"level":"info","message":"Listening on port 5000...","timestamp":"2020-08-02T10:31:27.341Z"}
 {"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-08-02T10:31:27.415Z"}
+{"level":"info","message":"Listening on port 5000...","timestamp":"2020-08-04T03:33:22.705Z"}
+{"level":"info","message":"Connected to mongodb://localhost/photoequipment...","timestamp":"2020-08-04T03:33:22.734Z"}
