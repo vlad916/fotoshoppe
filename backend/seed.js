@@ -146,7 +146,3 @@ async function seed() {
 }
 
 seed();
-
-
-
-await mongoose.connect(config.get("db"));
