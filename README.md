@@ -10,9 +10,8 @@ When the user loads the page, they should be given the option to create an accou
 
 * https://fotoshoppe-916.herokuapp.com/products
 
-#### (PLEASE READ: When deploying the app in heroku, the `SIGN UP, SIGN IN (authentication)` function was not working, 
-#### but was perfectly running using the `localhost`. It is `HIGHLY RECOMMENDED` to follow carefully 
-#### the instructions below in order to experience the full functionality of the application.)
+#### (PLEASE READ: When deploying the app in heroku, the `SIGN UP, SIGN IN (authentication)` function was not working, but was perfectly running using the `localhost`. It is `HIGHLY RECOMMENDED` to follow carefully the instructions below in order to experience the full functionality of the application.)
+___
 
 ## Instructions on how to use the application in the LOCAL HOST
 
