@@ -34,6 +34,10 @@ ___
 
 ___
 
+## Presentation
+
+* https://docs.google.com/presentation/d/1Gkuff7lZK0o9b_SX55F9IthJm8KSu57DcyyJ67GGsOE/edit?usp=sharing
+
 ## Technologies Used
 
 * MongodDB
