@@ -24,7 +24,7 @@ class ProductsTable extends Component {
           onClick={() => this.props.onLike(product)}
         />
       ),
-      label: "Add to Wishlist",
+      // label: "Add to Wishlist",
     },
     // {
     //   content: <button className="btn btn-success btn-sm">Add to Cart</button>,
@@ -70,9 +70,9 @@ class ProductsTable extends Component {
                   onLikeToggle={() => onLike(product)}
                 />
               </td>
-              <td>
+              {/* <td>
                 <button className="btn btn-success btn-sm">Add to Cart</button>
-              </td>
+              </td> */}
               <td>
                 <button
                   onClick={() => onDelete(product)}
